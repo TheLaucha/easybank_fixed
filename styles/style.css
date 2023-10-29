@@ -295,6 +295,7 @@ button:hover::before,
   margin-bottom: 5px;
 }
 .header__menu {
+  list-style-type: none;
   position: absolute;
   width: calc(100% - 3rem);
   left: 50%;
@@ -304,17 +305,73 @@ button:hover::before,
   padding: 1.625rem;
   border-radius: 5px;
 }
+
+.header__menu li {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 .header__menu a {
   display: block;
   padding: 0.625rem;
   color: #2d314d;
   text-align: center;
 }
+
+.header__links {
+  list-style-type: none;
+}
+
+.header__links li {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
 .header__links a {
   position: relative;
   font-size: 0.875rem;
   color: #9698a6;
   transition: color 300ms ease-in-out;
+}
+
+.skip-link-container {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-link-container:focus-within {
+  position: static;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 1;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px; /* Fuera del área visible */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-link:focus {
+  position: static; /* Restaurar la posición normal al recibir el foco */
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 1;
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;

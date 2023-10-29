@@ -19,8 +19,15 @@
       <div class="overlay has-fade"></div>
 
       <nav class="container container--pall flex flex-jc-sb flex-ai-c">
-        <a href="/" class="header__logo">
-          <img src="./images/logo.svg" alt="" />
+        <a
+          href="/"
+          class="header__logo"
+          title="Logotipo de easybank: redirecciona al inicio de la pagina."
+        >
+          <img
+            src="./images/logo.svg"
+            alt="Imagen decorativa: Logotipo de easybank: Banco digital que te ayuda con tus finanzas personales."
+          />
         </a>
 
         <a
@@ -34,21 +41,50 @@
           <span></span>
         </a>
 
-        <div class="header__links hide-for-mobile">
-          <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Blog</a
-          ><a href="#">Careers</a>
-        </div>
+        <ul class="header__links hide-for-mobile">
+          <li class="skip-link-container">
+            <a href="#main-content" class="skip-link">Skip to content</a>
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#main-content">About</a>
+          </li>
+          <li>
+            <a href="#footer">Contact</a>
+          </li>
+          <li>
+            <a href="#articles">Blog</a>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+        </ul>
 
         <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
       </nav>
 
-      <div class="header__menu has-fade">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Blog</a>
-        <a href="">Careers</a>
-      </div>
+      <ul class="header__menu has-fade">
+        <li class="skip-link-container">
+          <a href="#main-content" class="skip-link">Skip to content</a>
+        </li>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#main-content">About</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        <li>
+          <a href="#articles">Blog</a>
+        </li>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+      </ul>
     </header>
 
     <section class="hero">
@@ -66,7 +102,7 @@
       </div>
     </section>
 
-    <section class="feature">
+    <section class="feature" id="main-content">
       <div class="feature__content container container--pall">
         <div class="feature__intro">
           <h2>Why choose Easybank?</h2>
@@ -124,7 +160,7 @@
       </div>
     </section>
 
-    <section class="articles">
+    <section class="articles" id="articles">
       <div class="article__content container container--pall">
         <h2>Latest Articles</h2>
 
@@ -192,7 +228,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <a class="footer__logo" href="#" title="easybank logo to go to the home">
           <img
@@ -252,7 +288,7 @@
         <div class="footer__links col1">
           <a href="#">About Us</a>
           <a href="#">Contact</a>
-          <a href="#">Blog</a>
+          <a href="#articles">Blog</a>
         </div>
 
         <div class="footer__links col2">
